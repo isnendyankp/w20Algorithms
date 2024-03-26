@@ -21,6 +21,11 @@ function logAll(array: number[]) {
     console.log(array[i]);
   }
 }
+
+// No 2.
+def linear_time_example(arr):
+    for i in arr:
+        print(i)
 // O(n log n) - Linearithmic Time
 // O(n^2) - Quadratic Time
 // O(2^n) - Exponential Time
