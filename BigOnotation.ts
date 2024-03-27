@@ -48,3 +48,26 @@ def quadratic_time_example(arr):
         print(i)
         for j in arr:
             print(i+j)
+
+// Logarithmic Time - O(log n)
+// this code will run in logarithmic time because it halves the input each time
+// No 1.
+function binarySearch(array: number[], key: number) {
+  let low = 0;
+  let high = array.length - 1;
+  let mid;
+  let element;
+
+  while (low <= high) {
+    mid = Math.floor((low + high) / 2, 10);
+    element = array[mid];
+    if (element < key) {
+      low = mid + 1;
+    } else if (element > key) {
+      high = mid - 1;
+    } else {
+      return mid;
+    }
+  }
+  return -1;
+}
