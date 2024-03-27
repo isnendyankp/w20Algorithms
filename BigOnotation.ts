@@ -30,3 +30,15 @@ def linear_time_example(arr):
 // O(n^2) - Quadratic Time
 // O(2^n) - Exponential Time
 // O(n!) - Factorial Time
+
+// Quadratic Time - O(n^2)
+// this code will run in quadratic time because it has a nested loop
+// No 1.
+function addAndLog(array: number[]) {
+  for (let i = 0; i < array.length; i++) {
+    console.log(array[i]);
+    for (let j = 0; j < array.length; j++) {
+      console.log(array[i] + array[j]);
+    }
+  }
+}
