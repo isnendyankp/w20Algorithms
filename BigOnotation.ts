@@ -42,3 +42,9 @@ function addAndLog(array: number[]) {
     }
   }
 }
+// No 2.
+def quadratic_time_example(arr):
+    for i in arr:
+        print(i)
+        for j in arr:
+            print(i+j)
