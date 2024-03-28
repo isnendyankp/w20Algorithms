@@ -147,3 +147,11 @@ function fibonacci(num: number) {
   }
   return fibonacci(num - 1) + fibonacci(num - 2);
 }
+// No 2.
+def exponential_time_example(n):
+    if n == 0:
+        return 1
+    elif n == 1:
+        return 2
+    else:
+        return exponential_time_example(n-1) + exponential_time_example(n-2)
