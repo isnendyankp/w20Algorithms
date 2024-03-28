@@ -137,3 +137,13 @@ def merge(left, right):
             result.append(right[right_index])
             right_index += 1
     return result + left[left_index:] + right[right_index:]
+
+//  exponential time - O(2^n)
+//  this code will run in exponential time because it has a recursive function that calls itself twice
+// No 1.
+function fibonacci(num: number) {
+  if (num <= 1) {
+    return num;
+  }
+  return fibonacci(num - 1) + fibonacci(num - 2);
+}
