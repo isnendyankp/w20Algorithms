@@ -155,3 +155,13 @@ def exponential_time_example(n):
         return 2
     else:
         return exponential_time_example(n-1) + exponential_time_example(n-2)
+
+//  factorial time - O(n!)
+//  this code will run in factorial time because it has a recursive function that calls itself n times
+// No 1.
+function factorial(num: number) {
+  if (num <= 1) {
+    return 1;
+  }
+  return num * factorial(num - 1);
+}
