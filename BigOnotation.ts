@@ -84,3 +84,17 @@ def binary_search(arr, key):
         else:
             return mid
     return -1
+
+//  linearithmic time - O(n log n)
+//  this code will run in linearithmic time because it has a nested loop
+// No 1.
+function sort(array: number[]) {
+  if (array.length <= 1) {
+    return array;
+  }
+  const middle = Math.floor(array.length / 2);
+  const left = array.slice(0, middle);
+  const right = array.slice(middle);
+
+  return merge(sort(left), sort(right));
+}
