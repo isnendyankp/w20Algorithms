@@ -165,3 +165,9 @@ function factorial(num: number) {
   }
   return num * factorial(num - 1);
 }
+// No 2.
+def factorial_time_example(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial_time_example(n-1)
