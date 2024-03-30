@@ -13,3 +13,25 @@ def bubble_sort(arr):
 arr = [64, 34, 25, 12, 22, 11, 90]
 bubble_sort(arr)
 print("Sorted array is:", arr)
+
+# Output
+# Sorted array is: [11, 12, 22, 25, 34, 64, 90]
+
+# insertion sort
+def insertion_sort(arr):
+    for i in range(1, len(arr)):
+        key = arr[i]
+        j = i-1
+        while j >= 0 and key < arr[j]:
+            arr[j+1] = arr[j]
+            j -= 1
+        arr[j+1] = key
+    return arr
+
+# Test
+arr = [64, 34, 25, 12, 22, 11, 90]
+insertion_sort(arr)
+print("Sorted array is:", arr)
+
+# Output
+# Sorted array is: [11, 12, 22, 25, 34, 64, 90]
