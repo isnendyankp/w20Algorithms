@@ -1,39 +1,38 @@
-// Big O notation
+# // Big O notation
 
-// O(1) - Constant Time
-// this code will always run in the same amount of time regardless of the size of the array
-// because it only logs the first element of the array
-// No 1.
+# // O(1) - Constant Time
+# // this code will always run in the same amount of time regardless of the size of the array
+# // because it only logs the first element of the array
+# // No 1.
 function log(array: number[]) {
   console.log(array[0]);
   console.log(array[1]);
 }
 
-// No 2.
-def contant_time_example(arr):
-    return Array[0]
+# // No 2.
+def constant_time_example(arr):
+    return arr[0];
 
-// O(n) - Linear Time
-// this code will run in linear time because it will log each element of the array
-// No 1.
+# // O(n) - Linear Time
+# // this code will run in linear time because it will log each element of the array
+# // No 1.
 function logAll(array: number[]) {
+  console.log(array[0]);
+  console.log(array[1]);
   for (let i = 0; i < array.length; i++) {
     console.log(array[i]);
   }
 }
 
-// No 2.
+# // No 2.
 def linear_time_example(arr):
     for i in arr:
         print(i)
-// O(n log n) - Linearithmic Time
-// O(n^2) - Quadratic Time
-// O(2^n) - Exponential Time
-// O(n!) - Factorial Time
 
-// Quadratic Time - O(n^2)
-// this code will run in quadratic time because it has a nested loop
-// No 1.
+
+# // Quadratic Time - O(n^2)
+# // this code will run in quadratic time because it has a nested loop
+# // No 1.
 function addAndLog(array: number[]) {
   for (let i = 0; i < array.length; i++) {
     console.log(array[i]);
@@ -42,16 +41,16 @@ function addAndLog(array: number[]) {
     }
   }
 }
-// No 2.
+# // No 2.
 def quadratic_time_example(arr):
     for i in arr:
         print(i)
         for j in arr:
             print(i+j)
 
-// Logarithmic Time - O(log n)
-// this code will run in logarithmic time because it halves the input each time
-// No 1.
+# // Logarithmic Time - O(log n)
+# // this code will run in logarithmic time because it halves the input each time
+# // No 1.
 function binarySearch(array: number[], key: number) {
   let low = 0;
   let high = array.length - 1;
@@ -71,7 +70,7 @@ function binarySearch(array: number[], key: number) {
   }
   return -1;
 }
-// No 2.
+# // No 2.
 def binary_search(arr, key):
     low = 0
     high = len(arr) - 1
@@ -85,9 +84,9 @@ def binary_search(arr, key):
             return mid
     return -1
 
-//  linearithmic time - O(n log n)
-//  this code will run in linearithmic time because it has a nested loop
-// No 1.
+# //  linearithmic time - O(n log n)
+# //  this code will run in linearithmic time because it has a nested loop
+# // No 1.
 function sort(array: number[]) {
   if (array.length <= 1) {
     return array;
@@ -116,7 +115,7 @@ function merge(left: number[], right: number[]) {
 
   return result.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));
 }
-// No 2.
+# // No 2.
 def merge_sort(arr):
     if len(arr) <= 1:
         return arr
@@ -138,16 +137,16 @@ def merge(left, right):
             right_index += 1
     return result + left[left_index:] + right[right_index:]
 
-//  exponential time - O(2^n)
-//  this code will run in exponential time because it has a recursive function that calls itself twice
-// No 1.
+# //  exponential time - O(2^n)
+# //  this code will run in exponential time because it has a recursive function that calls itself twice
+# // No 1.
 function fibonacci(num: number) {
   if (num <= 1) {
     return num;
   }
   return fibonacci(num - 1) + fibonacci(num - 2);
 }
-// No 2.
+# // No 2.
 def exponential_time_example(n):
     if n == 0:
         return 1
@@ -156,16 +155,16 @@ def exponential_time_example(n):
     else:
         return exponential_time_example(n-1) + exponential_time_example(n-2)
 
-//  factorial time - O(n!)
-//  this code will run in factorial time because it has a recursive function that calls itself n times
-// No 1.
+# //  factorial time - O(n!)
+# //  this code will run in factorial time because it has a recursive function that calls itself n times
+# // No 1.
 function factorial(num: number) {
   if (num <= 1) {
     return 1;
   }
   return num * factorial(num - 1);
 }
-// No 2.
+# // No 2.
 def factorial_time_example(n):
     if n == 0:
         return 1
