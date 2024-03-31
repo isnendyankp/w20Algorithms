@@ -142,3 +142,24 @@ print("Sorted array is:", arr)
 
 # Output
 # Sorted array is: [11, 12, 22, 25, 34, 64, 90]
+
+# Comparison of sorting algorithms
+# Bubble sort
+# Time complexity: O(n^2)
+# Space complexity: O(1)
+# Insertion sort
+# Time complexity: O(n^2)
+# Space complexity: O(1)
+# Selection sort
+# Time complexity: O(n^2)
+# Space complexity: O(1)
+# Merge sort
+# Time complexity: O(n log n)
+# Space complexity: O(n)
+# Quick sort
+# Time complexity: O(n log n)
+# Space complexity: O(log n)
+# Heap sort
+# Time complexity: O(n log n)
+
+# The best sorting algorithm to use depends on the size of the list and the specific requirements of the application. For small lists, insertion sort is a good choice. For large lists, merge sort or quick sort are recommended. Heap sort is also a good choice for large lists, as it has a time complexity of O(n log n) and is an in-place sorting algorithm. Bubble sort and selection sort are not recommended for use in production code, as they have a time complexity of O(n^2) and are not efficient for large lists.
