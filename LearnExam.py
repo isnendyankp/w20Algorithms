@@ -27,6 +27,23 @@ print(is_palindrome(word))  # True
 word = "Hello"
 print(is_palindrome(word))  # False
 
+# Main Exam
+def IsPalindrome(strParam):
+    # convert the string to lowercase
+    strParam = strParam.lower()
+
+    # remove spaces and punctuation marks
+    strParam = ''.join(e for e in strParam if e.isalnum())
+
+    # check if the string is a palindrome
+    return strParam == strParam[::-1]
+
+
+  # code goes here
+#   return strParam
+
+# keep this function call here 
+# print IsPalindrome(raw_input())
 
 
 
@@ -64,7 +81,38 @@ unsorted_list = [64, 34, 25, 12, 22, 11, 90]
 print(merge_sort(unsorted_list))  # [11, 12, 22, 25, 34, 64, 90]
 
 
+#  Main exam Merge sort coderbyte
 
+# Implement the merge sort algorithm in python. Write a function that takes an unsorted list of integers as input and returns the list sorted in ascending order.
+
+# Requirements
+# 1. Your Function should implement the merge sort algorithm.
+# 2. Optimize your code for efficiency.
+# 3. Provide comments or explanations for any key steps or optimizations.
+
+# Example
+Input: [38, 27, 43, 3, 9, 82, 10]
+Output: [3, 9, 10, 27, 38, 43, 82]
+
+Input: [5, 2, 8, 5, 9, 1, 5, 2]
+Output: [1, 2, 2, 5, 5, 5, 8, 9]
+
+def Mergesort(arr):
+    if len(arr) <= 1:
+        return arr
+    mid = len(arr) // 2
+    left = arr[:mid]
+    right = arr[mid:]
+
+    left = Mergesort(left)
+    right = Mergesort(right)
+
+    return merge(left, right)
+
+    return arr
+
+# keep this function call here
+# print Mergesort(raw_input())
 
 
 
@@ -97,6 +145,63 @@ def merge_sort_desc(arr):
 # test the function
 unsorted_list = [34, 27, 43, 3, 9, 82, 10]
 print(merge_sort_desc(unsorted_list))  # [82, 43, 34, 27, 10, 9, 3]
+
+#  main assessment Merge sort desc coderbyte
+
+# Implement the merge sort algorithm in python. Write a function that takes an unsorted list of integers as input and returns the list sorted in descending order.
+
+# Requirements
+# 1. Your Function should implement the merge sort algorithm.
+# 2. Optimize your code for efficiency.
+# 3. Provide comments or explanations for any key steps or optimizations.
+
+# Examples
+Input: [38, 27, 43, 3, 9, 82, 10]
+Output: [82, 43, 38, 27, 10, 9, 3]
+
+Input: [5, 2, 8, 5, 9, 1, 5, 2]
+Output: [9, 8, 5, 5, 5, 2, 2, 1]
+
+#  Base code:
+def Mergesortdesc(arr):
+    # if array has less than 2 elements
+    if len(arr) <= 1:
+        return arr
+
+    # split array
+    mid = len(arr) // 2
+    left = arr[:mid]
+    right = arr[mid:]
+
+    # recursively sort 
+    left = Mergesortdesc(left)
+    right = Mergesortdesc(right)
+
+    return mergedesc(left, right)
+
+def mergedesc(left, right):
+    result = []
+    i = 0
+    j = 0
+
+    while i < len(left) and j < len(right):
+        if left[i] >= right[j]:
+            result.append(left[i])
+            i += 1
+        else:
+            result.append(right[j])
+            j += 1
+
+    # extend result with the remaining elements
+    result.extend(left[i:])
+    result.extend(right[j:])
+    return result 
+
+# keep this function call here 
+print(Mergesortdesc(list(map(int, input().split()))))
+
+
+
 
 
 
