@@ -96,4 +96,30 @@ def merge_sort_desc(arr):
 
 # test the function
 unsorted_list = [34, 27, 43, 3, 9, 82, 10]
-print(merge_sort_desc(unsorted_list))  # [82, 43, 34, 27, 10, 9, 3] 
+print(merge_sort_desc(unsorted_list))  # [82, 43, 34, 27, 10, 9, 3]
+
+
+
+
+# 4. Factorial Recursion
+# Write a recursive function to calculate the factorial of a non-negative integer n. The factorial of  n is the product of all positive integers up to n.
+
+# Requirements
+# 1. Your function should use recursion to calculate the factorial.
+# 2. Handle the base case appropriately.
+# 3. Optimize your code for efficiency.
+# 4. Provide comments or explanations for any key steps or optimizations.
+
+# Example
+def factorial_recursive(n):
+    # Base case: factorial of 0 is 1
+    if n == 0:
+        return 1
+    
+    # Recursive case: n! = n * (n-1)!
+    return n * factorial_recursive(n - 1)
+
+# Test the function
+n = 5
+result = factorial_recursive(n)
+print (result)  # 120
