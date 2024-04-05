@@ -123,3 +123,53 @@ def factorial_recursive(n):
 n = 5
 result = factorial_recursive(n)
 print (result)  # 120
+
+
+
+
+
+# 5. Binary Search Implementation
+# Implement the binary search algorithm in python. Write a function that takes a sorted list of integers and a target value as input and returns the index of the target value if its present in the list, or -1 if target value is not found.
+
+# Requirements
+# 1. Your function should implement the binary search algorithm.
+# 2. Handle the case whehre the list is empty.
+# 3. Optimize your code for efficiency.
+# 4. Provide comments or explanations for any key steps or optimizations.
+# 5. Return the index of element.
+
+# Example
+def binary_search(arr, target) :
+    # Check if the list is empty
+    if not arr:
+        return -1
+    
+    low = 0
+    high = len(arr) - 1
+    
+    while low <= high:
+        mid = (low + high) // 2
+        
+        # If the target is found at mid, return the index
+        if arr[mid] == target:
+            return mid
+        
+        # If the target is greater than the mid element, ignore left half
+        elif arr[mid] < target:
+            low = mid + 1
+        
+        # If the target is smaller than the mid element, ignore right half
+        else:
+            high = mid - 1
+    
+    # If the target is not found in the list, return -1
+    return -1
+
+# Test the function
+sorted_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+target_value = 7
+
+result = binary_search(sorted_list, target_value)
+
+print(result)  # 6
