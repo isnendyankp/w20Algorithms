@@ -28,6 +28,11 @@ word = "Hello"
 print(is_palindrome(word))  # False
 
 
+
+
+
+
+
 # 2. Merge Sort
 #  implement the merge sort algorithm in python. Write a function that takes an unsorted list of integers as input and returns the list sorted in ascending order.
 
@@ -57,3 +62,38 @@ def merge_sort(arr):
 # test the function
 unsorted_list = [64, 34, 25, 12, 22, 11, 90]
 print(merge_sort(unsorted_list))  # [11, 12, 22, 25, 34, 64, 90]
+
+
+
+
+
+
+# 3. Merge Sort desc
+# Implement the merge sort algorithm in python. Write a function that takes an unsorted list of integers as input and returns the list sorted in descending order.
+
+# Requirements
+# 1. Your Function should implement the merge sort algorithm.
+# 2. Optimize your code for efficiency.
+# 3. Provide comments or explanations for any key steps or optimizations.
+
+# Example
+def merge_sort_desc(arr):
+    # Base case: If the array has less than 2 elements, return the array
+    if len(arr) <= 1:
+        return arr
+    
+    # Split the array into two halves
+    mid = len(arr) // 2
+    left = arr[:mid]
+    right = arr[mid:]
+    
+    # Recursively sort the two halves
+    left = merge_sort_desc(left)
+    right = merge_sort_desc(right)
+    
+    # Merge the sorted halves in descending order
+    return merge_desc(left, right)
+
+# test the function
+unsorted_list = [34, 27, 43, 3, 9, 82, 10]
+print(merge_sort_desc(unsorted_list))  # [82, 43, 34, 27, 10, 9, 3] 
