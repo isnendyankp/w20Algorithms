@@ -142,6 +142,25 @@ def merge_sort_desc(arr):
     # Merge the sorted halves in descending order
     return merge_desc(left, right)
 
+def merge_desc(left, right):
+    result = []
+    i = 0
+    j = 0
+    
+    while i < len(left) and j < len(right):
+        if left[i] >= right[j]:
+            result.append(left[i])
+            i += 1
+        else:
+            result.append(right[j])
+            j += 1
+    
+    # Extend the result with the remaining elements
+    result.extend(left[i:])
+    result.extend(right[j:])
+    
+    return result
+
 # test the function
 unsorted_list = [34, 27, 43, 3, 9, 82, 10]
 print(merge_sort_desc(unsorted_list))  # [82, 43, 34, 27, 10, 9, 3]
