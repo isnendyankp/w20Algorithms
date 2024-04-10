@@ -170,3 +170,16 @@ def factorial_time_example(n):
         return 1
     else:
         return n * factorial_time_example(n-1)
+    
+# //  cubic time - O(n^3)
+# //  this code will run in cubic time because it has a nested loop that iterates over the array
+# // No 1.
+function cubicTime(array: number[]) {
+  for (let i = 0; i < array.length; i++) {
+    for (let j = 0; j < array.length; j++) {
+      for (let k = 0; k < array.length; k++) {
+        console.log(array[i] + array[j] + array[k]);
+      }
+    }
+  }
+}
