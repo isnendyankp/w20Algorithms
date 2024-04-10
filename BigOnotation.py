@@ -183,3 +183,7 @@ function cubicTime(array: number[]) {
     }
   }
 }
+
+# test cases cubic time
+cubicTime([1, 2, 3, 4, 5])
+cubicTime([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
