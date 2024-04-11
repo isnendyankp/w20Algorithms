@@ -213,3 +213,15 @@ function factorial(num: number) {
 factorial(5)
 
 # result: 120
+
+# // No 2.
+def factorial_time_example(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial_time_example(n-1)
+    
+# test cases factorial time
+factorial_time_example(5)
+
+# result: 120
