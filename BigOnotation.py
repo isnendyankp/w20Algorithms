@@ -187,3 +187,14 @@ function cubicTime(array: number[]) {
 # test cases cubic time
 cubicTime([1, 2, 3, 4, 5])
 cubicTime([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+
+# // No 2.
+def cubic_time_example(arr):
+    for i in arr:
+        for j in arr:
+            for k in arr:
+                print(i+j+k)
+
+# test cases cubic time
+cubic_time_example([1, 2, 3, 4, 5])
+cubic_time_example([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
