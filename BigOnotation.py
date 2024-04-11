@@ -198,3 +198,18 @@ def cubic_time_example(arr):
 # test cases cubic time
 cubic_time_example([1, 2, 3, 4, 5])
 cubic_time_example([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+
+# //  factorial time - O(n!)
+# //  this code will run in factorial time because it has a recursive function that calls itself n times
+# // No 1.
+function factorial(num: number) {
+  if (num <= 1) {
+    return 1;
+  }
+  return num * factorial(num - 1);
+}
+
+# // test cases factorial time
+factorial(5)
+
+# result: 120
